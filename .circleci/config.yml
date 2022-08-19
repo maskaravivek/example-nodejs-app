@@ -1,0 +1,15 @@
+version: 2.1
+workflows:
+  testing:
+    jobs:
+      - runner-test
+
+jobs:
+  runner-test: # this can be any name you choose
+    machine: true
+    resource_class: maskaravivek/circleci-gwp
+    steps:
+      - checkout # checkout source code
+      - run:
+          name: 
+          command: npm test
